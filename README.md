@@ -7,6 +7,6 @@
 
 - Клонировать этот репозиторий на свой компьютер
 - Задать данные своей БД в .env файле и в config/db.php
-- Задать email адрес, для рассылки сообщений в config/console.php. Ассоциативный ряд $config содержит поле ```'mailer' => [..., 'transport' => [ 'username' => '', 'password' => '' ]```, в котором по умолчанию пустуют данные для username и password - их нужно заполнить учетными данными своего email адреса. Также по умолчанию smtp хост настроен на gmail: ```'host' => 'smtp.gmail.com'```, можно заменить на любой другой (smtp.mail.ru, smtp.yahoo.com, etc) Возможно, дополнительно придется сконфигурировать настройки своей email учетной записи, типа allow less secure apps на Gmail: https://support.google.com/accounts/answer/6010255?hl=en
+- Задать email адрес, для рассылки сообщений в config/console.php. Ассоциативный ряд $config содержит поле ```'mailer' => [..., 'transport' => [ 'username' => '', 'password' => '' ], ...]```, в котором по умолчанию пустуют данные для username и password - их нужно заполнить учетными данными своего email адреса. Также по умолчанию smtp хост настроен на gmail: ```'host' => 'smtp.gmail.com'``` - его можно заменить на любой другой (smtp.mail.ru, smtp.yahoo.com, etc) Возможно, дополнительно придется сконфигурировать настройки своей email учетной записи, типа allow less secure apps на Gmail: https://support.google.com/accounts/answer/6010255?hl=en
 - Запустить docker-compose up --build
 - Должно работать :)
