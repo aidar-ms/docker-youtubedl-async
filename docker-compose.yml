@@ -22,6 +22,7 @@ services:
       - '8000:80'
     volumes: 
      - ".env:/app/.env"
+     - "/config/:/app/config"
     links: 
       - mysql
       - gearman
