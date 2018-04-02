@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}" 
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - '4306:3306'
+
+  gearman:
+    image: pataquets/gearmand
+    ports: 
+      - '4730:4730'
+
+  php:
+    image: aidarms/youtube_dl_async
+    ports:
+      - '8000:80'
+    volumes: 
+     - ".env:/app/.env"
+    links: 
+      - mysql
+      - gearman
