@@ -31,6 +31,7 @@ class YoutubeDownloaderController extends Controller
         $tmpDir = \Yii::getAlias('@app/tmp/dl-folder/') . $m[1];
         $ytVideoId = $m[1];
 
+        /* Report on worker's status */
         echo "working on $ytVideoId";
         
         /* Extract mp3 file from youtube video */

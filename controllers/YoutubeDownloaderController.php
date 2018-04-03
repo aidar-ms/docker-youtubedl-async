@@ -57,6 +57,9 @@ class YoutubeDownloaderController extends Controller {
 
     }
 
+    /**
+     * Lets the user download the file. Triggered when user clicks on download link in his email
+     */
     public function actionDownload() {
         
         $records = new Records;
